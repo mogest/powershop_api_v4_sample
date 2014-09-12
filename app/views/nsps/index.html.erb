@@ -1,0 +1,5 @@
+<ul>
+  <% @nsps.each do |nsp| %>
+    <%= content_tag :li, link_to("#{nsp['name']} (#{nsp['location']})", nsp_path(nsp['id'])) %>
+  <% end %>
+</ul>

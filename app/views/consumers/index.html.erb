@@ -1,0 +1,8 @@
+<ul>
+  <% @consumers.each do |consumer| %>
+    <li>
+      <%= link_to consumer["address"].join(", "), consumer_path(consumer["id"]) %>
+      <%= link_to "(aggregate NSP data)", nsp_path(consumer["nsp_id"]) %>
+    </li>
+  <% end %>
+</ul>

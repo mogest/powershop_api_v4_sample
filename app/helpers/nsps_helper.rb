@@ -1,0 +1,2 @@
+module NspsHelper
+end

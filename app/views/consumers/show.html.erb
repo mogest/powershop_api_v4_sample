@@ -1,0 +1,14 @@
+<%= form_tag nil, method: :get do %>
+  <p>
+    Start date: <%= text_field_tag :start_date, @start_date %>
+    End date: <%= text_field_tag :end_date, @end_date %>
+
+    <%= submit_tag "Update" %>
+  </p>
+<% end %>
+
+<% @readings.each do |date, readings| %>
+  <div><%= date %></div>
+  <div><%= readings.join(", ") %></div>
+  <br>
+<% end %>
